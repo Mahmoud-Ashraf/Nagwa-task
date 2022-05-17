@@ -1,0 +1,36 @@
+.calender {
+    width: 100%;
+    border-spacing: 5px;
+}
+
+.calender td {
+    text-align: center;
+    width: 14.285%;
+}
+
+.calender thead td {
+    color: #b9b9b9;
+    padding: 1rem .3rem;
+}
+
+.calender tbody td {
+    font-size: .9rem;
+    vertical-align: middle;
+    padding: 1rem .3rem;
+    border-radius: .5rem;
+}
+
+.day-off {
+    background-color: #eaeaea;
+}
+
+.attended {
+    background-color: #f1f7e7;
+}
+
+.absent {
+    background-color: #fce8e8;
+}
+.calender-controller {
+    color: #333;
+}

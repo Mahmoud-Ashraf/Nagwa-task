@@ -1,0 +1,96 @@
+.table,
+.table-foot {
+    border: 0;
+    width: 100%;
+    border-spacing: 5px 0;
+}
+
+.table td {
+    padding: 0 20px;
+    text-align: center;
+}
+
+.table tr td:first-child,
+.table-foot tr td:first-child {
+    text-align: left;
+    font-weight: 600;
+}
+
+/* Table Header */
+
+.table thead td {
+    padding: 0 20px 20px 20px;
+}
+
+.table thead td:not(:first-child) {
+    color: #9b9b9b;
+}
+
+.table thead td:first-child {
+    padding-left: 0;
+}
+
+/* Table Body */
+.table tbody tr {
+    background-color: #fff;
+}
+
+.table tbody td {
+    background-color: #fff;
+    border-left: 1px solid #EEE;
+    border-right: 1px solid #EEE;
+}
+
+.table tbody tr:first-child td {
+    border-radius: 20px 20px 0 0;
+    border-top: 1px solid #EEE;
+}
+
+.table tbody tr:last-child td {
+    border-radius: 0 0 20px 20px;
+    border-bottom: 1px solid #EEE;
+}
+
+.table tbody td>span {
+    display: block;
+    border-bottom: 1px solid #EEE;
+    padding: 20px 0;
+}
+
+/* Table Footer */
+.table-foot {
+    border-collapse: separate;
+    margin-top: 5px;
+    border-spacing: 0;
+    position: sticky;
+    left: 0;
+}
+
+.table-foot td {
+    background-color: #fff;
+    border-radius: 20px;
+    border: 1px solid #EEE;
+    padding: 20px;
+    text-align: center;
+}
+
+.table-foot td>span {
+    display: block;
+    border-left: 1px solid #EEE;
+    padding: 0 20px;
+}
+
+.table-foot td:first-child {
+    border-right: 0;
+    border-radius: 20px 0 0 20px;
+}
+
+.table-foot td:last-child {
+    border-radius: 0 20px 20px 0;
+    width: 20%;
+    border-left: 0;
+}
+
+.fail {
+    color: #ff1c1c;
+}

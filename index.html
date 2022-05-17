@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/styles/all.min.css">
+    <link rel="stylesheet" href="./assets/styles/style.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+    <title>Nagwa Task</title>
+</head>
+
+<body>
+    <div class="container">
+        <!-- NAV -->
+        <nav class="main-nav">
+            <div class="logo">
+                <img src="assets/images/logo.png" alt="School Logo">
+                <p class="logo-text">Step to Success School</p>
+            </div>
+
+            <ul class="main-menu">
+                <li>
+                    <a href="#" class="notifications-btn">
+                        <span class="fa-layers fa-fw">
+                            <i class="far fa-bell"></i>
+                            <span class="fa-layers-counter" style="background:Tomato"></span>
+                        </span>
+                        <!-- <i class="far fa-bell"></i> -->
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="user-btn">
+                        <i class="far fa-user"></i>
+                    </a>
+                    <i class="fas fa-caret-down"></i>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- BREADCRUMP -->
+    <div class="breadcrump">
+        <div class="container">
+            <div class="children">
+                <div class="left-section">
+                    <div class="selected-child">
+                        <img src="assets/images/kid.jpg" alt="Avatar" class="avatar">
+                        <h3>Adam</h3>
+                    </div>
+                </div>
+                <div class="right-section">
+                    <div class="children-pills">
+                        <div class="child-pill">
+                            <img src="assets/images/kid.jpg" alt="Avatar" class="avatar">
+                            <span>Maged</span>
+                        </div>
+                        <div class="child-pill active">
+                            <img src="assets/images/kid.jpg" alt="Avatar" class="avatar">
+                            <span>Adam</span>
+                        </div>
+                        <div class="child-pill">
+                            <img src="assets/images/kid.jpg" alt="Avatar" class="avatar">
+                            <span>Nabil</span>
+                        </div>
+                    </div>
+                    <button class="btn-add">
+                        <i class="fas fa-user-plus"></i> Add Child
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- STATISTICS -->
+    <div class="statistics">
+        <div class="container">
+            <div class="box">
+                <div class="box-header">
+                    <h2 class="main-title">
+                        Statistics
+                    </h2>
+                </div>
+                <div class="box-content">
+                    <div class="stats">
+                        <div class="progress">
+                            <div class="percent">
+                                <svg>
+                                    <circle cx="45" cy="45" r="45"></circle>
+                                </svg>
+                                <div class="number">
+                                    <h2>81<span>%</span></h2>
+                                </div>
+                            </div>
+                            <h4 class="progress-number">32 out of 40</h4>
+                            <h2 class="progress-title">Solved Homework</h2>
+                        </div>
+                        <div class="progress">
+                            <div class="percent">
+                                <svg>
+                                    <circle cx="45" cy="45" r="45"></circle>
+                                </svg>
+                                <div class="number">
+                                    <h2>50<span>%</span></h2>
+                                </div>
+                            </div>
+                            <h4 class="progress-number">45 out of 90</h4>
+                            <h2 class="progress-title">Attended Days</h2>
+                        </div>
+                        <div class="progress">
+                            <div class="percent">
+                                <svg>
+                                    <circle cx="45" cy="45" r="45"></circle>
+                                </svg>
+                                <div class="number">
+                                    <h2>93<span>%</span></h2>
+                                </div>
+                            </div>
+                            <h4 class="progress-number">8 out of 11</h4>
+                            <h2 class="progress-title">Online Sessions attended</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- HOMEWORK -->
+    <div class="homework">
+        <div class="container">
+            <div class="box">
+                <div class="box-header">
+                    <h2 class="main-title">
+                        Homework
+                    </h2>
+                    <button class="header-btn">All Homeworks <i class="fas fa-chevron-right"></i></button>
+                </div>
+                <div class="box-content">
+                    <div class="chart-container">
+                        <h3>Chemistry <i class="fas fa-chevron-circle-down"></i></h3>
+                        <canvas id="myChart" height="100"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ATTENDANCE -->
+    <div class="attendance">
+        <div class="container">
+            <div class="box">
+                <div class="box-header">
+                    <h2 class="main-title">
+                        Attendance
+                    </h2>
+                    <div class="calender-controller">
+                        <button class="header-btn"><i class="fas fa-chevron-left"></i></button>
+                        <span>March</span>
+                        <i class="fas fa-circle fa-xs"></i>
+                        <span>2022</span>
+                        <button class="header-btn"><i class="fas fa-chevron-right"></i></button>
+                    </div>
+                </div>
+                <div class="box-content">
+                    <table class="calender">
+                        <thead>
+                            <tr>
+                                <td>Sun</td>
+                                <td>Mon</td>
+                                <td>Tue</td>
+                                <td>Wed</td>
+                                <td>Thu</td>
+                                <td>Fri</td>
+                                <td>Sat</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td class="attended">1</td>
+                                <td class="attended">2</td>
+                                <td class="attended">3</td>
+                                <td class="day-off">4</td>
+                                <td class="day-off">5</td>
+                            </tr>
+                            <tr>
+                                <td class="attended">6</td>
+                                <td class="attended">7</td>
+                                <td class="attended">8</td>
+                                <td class="attended">9</td>
+                                <td class="attended">10</td>
+                                <td class="day-off">11</td>
+                                <td class="day-off">12</td>
+                            </tr>
+                            <tr>
+                                <td class="absent">13</td>
+                                <td class="attended">14</td>
+                                <td class="attended">15</td>
+                                <td class="attended">16</td>
+                                <td class="attended">17</td>
+                                <td class="day-off">18</td>
+                                <td class="day-off">19</td>
+                            </tr>
+                            <tr>
+                                <td class="absent">20</td>
+                                <td class="attended">21</td>
+                                <td class="absent">22</td>
+                                <td class="attended">23</td>
+                                <td class="attended">24</td>
+                                <td class="day-off">25</td>
+                                <td class="day-off">26</td>
+                            </tr>
+                            <tr>
+                                <td class="absent">27</td>
+                                <td class="attended">28</td>
+                                <td class="attended">29</td>
+                                <td class="attended">30</td>
+                                <td class="attended">31</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- GRADEBOOK -->
+    <div class="gradebook">
+        <div class="container">
+            <div class="box">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <td>
+                                <h2 class="main-title">
+                                    Gradebook
+                                </h2>
+                            </td>
+                            <td><span>1st Semester</span></td>
+                            <td><span>2nd Semester</span></td>
+                            <td><span>3rd Semester</span></td>
+                            <td><span>Total Marks</span></td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><span>Math</span></td>
+                            <td><span><span>42</span><span>/50</span></span></td>
+                            <td><span><span>40</span><span>/50</span></span></td>
+                            <td><span><span>50</span></span></td>
+                            <td><span><span>82</span><span>/100</span></span></td>
+                        </tr>
+                        <tr>
+                            <td><span>Geology</span></td>
+                            <td><span><span>80</span><span>/100</span></span></td>
+                            <td><span><span>92</span><span>/100</span></span></td>
+                            <td><span><span>100</span></span></td>
+                            <td><span><span>172</span><span>/200</span></span></td>
+                        </tr>
+                        <tr>
+                            <td><span>Sociology</span></td>
+                            <td><span><span>50</span><span>/50</span></span></td>
+                            <td><span><span>43</span><span>/50</span></span></td>
+                            <td><span><span>50</span></span></td>
+                            <td><span><span>93</span><span>/100</span></span></td>
+                        </tr>
+                        <tr>
+                            <td><span>Chemistry</span></td>
+                            <td><span><span>98</span><span>/100</span></span></td>
+                            <td><span><span>99</span><span>/100</span></span></td>
+                            <td><span><span>100</span></span></td>
+                            <td><span><span>197</span><span>/200</span></span></td>
+                        </tr>
+                        <tr>
+                            <td><span>Statics</span></td>
+                            <td><span><span class="fail">30</span><span>/100</span></span></td>
+                            <td><span><span>72</span><span>/100</span></span></td>
+                            <td><span><span>100</span></span></td>
+                            <td><span><span>102</span><span>/200</span></span></td>
+                        </tr>
+                        <tr>
+                            <td><span>Science</span></td>
+                            <td><span><span class="fail">20</span><span>/50</span></span></td>
+                            <td><span><span class="fail">19</span><span>/50</span></span></td>
+                            <td><span><span>50</span></span></td>
+                            <td><span><span class="fail">39</span><span>/100</span></span></td>
+                        </tr>
+                        <tr>
+                            <td><span>Arabic</span></td>
+                            <td><span><span>80</span><span>/100</span></span></td>
+                            <td><span><span>92</span><span>/100</span></span></td>
+                            <td><span><span>100</span></span></td>
+                            <td><span><span>172</span><span>/200</span></span></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table class="table-foot">
+                    <tr>
+                        <td colspan="4">Total Mark</td>
+                        <td><span><span class="text-bold">3785</span><span>/4000</span></span></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="inner-footer">
+                <div class="logo">
+                    <img src="assets/images/nagwa-logo.svg" class="footer-logo" alt="Nagwa Logo">
+                </div>
+                <p>Copyright © 2022 Nagwa All Rights Reserved</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./assets/scripts/chart.min.js"></script>
+    <script src="./assets/scripts/all.min.js"></script>
+    <script src="./assets/scripts/script.js"></script>
+</body>
+
+</html>

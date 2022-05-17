@@ -1,0 +1,77 @@
+@media screen and (max-width: 768px) {
+
+    html,
+    body {
+        font-size: 14px;
+    }
+
+    .container {
+        max-width: 100%;
+    }
+
+    .breadcrump .children {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .breadcrump .children .left-section {
+        margin-bottom: 20px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .breadcrump .children .right-section {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+    }
+
+    .children .right-section .children-pills {
+        margin-bottom: 20px;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .children .right-section .children-pills .child-pill {
+        margin-bottom: 10px;
+        margin-right: 0;
+    }
+
+    .btn-add {
+        width: 100%;
+    }
+
+    .stats {
+        flex-direction: column;
+    }
+
+    .stats .progress {
+        margin-bottom: 20px;
+    }
+
+    .stats .progress:last-child {
+        margin-bottom: 0;
+    }
+
+    /* #myChart {
+        height: 300px;
+    } */
+    .chart-container h3 {
+        top: 21px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+    html,
+    body {
+        font-size: 12px;
+    }
+    .chart-container {
+        height: 200px;
+    }
+    /* #myChart {
+        height: 600px !important;
+    } */
+}
