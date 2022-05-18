@@ -144,6 +144,7 @@ const days = [
     'Sat'
 ]
 
+// Callender
 let selectedMonth = new Date();
 function initCalenderSelectedMonth() {
     let calenderMonthYear = document.getElementsByClassName('calender-controller')[0].getElementsByTagName('span');
@@ -161,3 +162,24 @@ function changeCalenderSelectedMonth(direction) {
 }
 
 initCalenderSelectedMonth();
+
+
+// Gradebook
+function intitGradebook() {
+    let gradebookTable = document.getElementById('gradebook-table');
+    console.log(gradebookTable);
+    let tableBody = gradebookTable.getElementsByTagName('tbody')[0];
+    console.log(tableBody);
+    let tableBodyCell = tableBody.getElementsByTagName('td');
+    console.log(tableBodyCell);
+    for (let i = 0; i < tableBodyCell.length; i++) {
+        let cellData = tableBodyCell[i].getElementsByTagName('span');
+        if (cellData.length > 1) {
+            if(Number(cellData[0].innerHTML) < Number(cellData[1].innerHTML)/2) {
+                cellData[0].classList.add('fail');
+            }
+            ;
+        }
+    }
+}
+intitGradebook();

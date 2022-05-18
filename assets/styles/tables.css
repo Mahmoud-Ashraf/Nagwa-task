@@ -51,8 +51,7 @@
     border-bottom: 1px solid #EEE;
 }
 
-.table tbody td>span {
-    display: block;
+.table tbody td>p {
     border-bottom: 1px solid #EEE;
     padding: 20px 0;
 }
