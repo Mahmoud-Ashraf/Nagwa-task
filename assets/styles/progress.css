@@ -60,21 +60,21 @@
     stroke-width: 3;
     stroke-linecap: round;
     transform: translate(5px, 5px);
-    stroke-dasharray: 285;
-    stroke-dashoffset: 285;
+    stroke-dasharray: 282.6;
+    stroke-dashoffset: 282.6;
 }
 
 .progress:nth-child(1) svg circle {
-    stroke-dashoffset: calc(285 - (285 * 81) / 100);
+    stroke-dashoffset: calc(282.6 - (282.6 * 81) / 100);
     stroke: #4a3274;
 }
 
 .progress:nth-child(2) svg circle {
-    stroke-dashoffset: calc(285 - (285 * 50) / 100);
+    stroke-dashoffset: calc(282.6 - (282.6 * 50) / 100);
     stroke: #739500;
 }
 
 .progress:nth-child(3) svg circle {
-    stroke-dashoffset: calc(285 - (285 * 93) / 100);
+    stroke-dashoffset: calc(282.6 - (282.6 * 93) / 100);
     stroke: #9c128f;
 }
