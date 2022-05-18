@@ -1,3 +1,25 @@
+function drawCircleProgress() {
+    let circleProgresses = document.getElementsByClassName('progress');
+    for (let i = 0; i < circleProgresses.length; i++) {
+        let percent = circleProgresses[i].getElementsByClassName('percent')[0];
+        let progressPercentage = circleProgresses[i].getAttribute('aria-progress');
+        let progressColor = circleProgresses[i].getAttribute('aria-color');
+        let progressCircle = circleProgresses[i].getElementsByTagName('circle')[0];
+        let progressDot = circleProgresses[i].getElementsByClassName('end-circle')[0];
+        let circleRadius = progressCircle.getAttribute('r');
+        let circleCirconference = 2 * circleRadius * 3.14;
+        let dashOffset = circleCirconference - (circleCirconference * progressPercentage) / 100;
+        progressCircle.style.strokeDasharray = circleCirconference;
+        progressCircle.style.strokeDashoffset = dashOffset;
+        progressCircle.style.stroke = progressColor;
+        progressDot.style.transform = 'translateX(-50%) rotate('+ progressPercentage/100 +'turn)';
+        progressDot.getElementsByClassName('dot')[0].style.borderColor = progressColor;
+        percent.getElementsByTagName('h2')[0].style.color = progressColor;
+        percent.getElementsByTagName('h2')[0].innerHTML = progressPercentage;
+        percent.getElementsByTagName('span')[0].style.color = progressColor;
+    }
+}
+
 const labels = [
     '19/5',
     '18/4',
@@ -95,4 +117,5 @@ const myChart = new Chart(
     document.getElementById('myChart'),
     config
 );
+drawCircleProgress();
 

@@ -2,6 +2,7 @@
     --circle-progress-diameter: 90px;
     --circle-progress-circonference: 282.6
 }
+
 .progress {
     display: flex;
     flex-direction: column;
@@ -33,7 +34,8 @@
     font-weight: 600;
     font-size: 22px;
 }
-.percent .number h2 span {
+
+.percent .number span {
     font-weight: 400;
     font-size: 14px;
 }
@@ -68,8 +70,8 @@
     stroke-width: 3;
     stroke-linecap: round;
     transform: translate(5px, 5px);
-    stroke-dasharray: var(--circle-progress-circonference);
-    stroke-dashoffset: var(--circle-progress-circonference);
+    /* stroke-dasharray: var(--circle-progress-circonference);
+    stroke-dashoffset: var(--circle-progress-circonference); */
 }
 
 .end-circle {
@@ -81,6 +83,7 @@
     transform: translateX(-50%);
     z-index: 9999;
 }
+
 .end-circle .dot {
     position: absolute;
     top: 0;
@@ -92,7 +95,7 @@
     background-color: #FFF;
 }
 
-.progress:nth-child(1) svg circle {
+/* .progress:nth-child(1) svg circle {
     stroke-dashoffset: calc(var(--circle-progress-circonference) - (var(--circle-progress-circonference) * 81) / 100);
     stroke: #4a3274;
 }
@@ -102,34 +105,7 @@
 .progress:nth-child(1) .end-circle .dot {
     border-color: #4a3274;
 }
-.progress:nth-child(1) .percent .number h2 {
+.progress:nth-child(1) .percent .number h2, .progress:nth-child(1) .percent .number span {
     color: #4a3274;
 }
-
-.progress:nth-child(2) svg circle {
-    stroke-dashoffset: calc(var(--circle-progress-circonference) - (var(--circle-progress-circonference) * 50) / 100);
-    stroke: #739500;
-}
-.progress:nth-child(2) .end-circle {
-    transform: translateX(-50%) rotate(.5turn);
-}
-.progress:nth-child(2) .end-circle .dot {
-    border-color: #739500;
-}
-.progress:nth-child(2) .percent .number h2 {
-    color: #739500;
-}
-
-.progress:nth-child(3) svg circle {
-    stroke-dashoffset: calc(var(--circle-progress-circonference) - (var(--circle-progress-circonference) * 93) / 100);
-    stroke: #9c128f;
-}
-.progress:nth-child(3) .end-circle {
-    transform: translateX(-50%) rotate(.93turn);
-}
-.progress:nth-child(3) .end-circle .dot {
-    border-color: #9c128f;
-}
-.progress:nth-child(3) .percent .number h2 {
-    color: #9c128f;
-}
+*/
