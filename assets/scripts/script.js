@@ -12,7 +12,7 @@ function drawCircleProgress() {
         progressCircle.style.strokeDasharray = circleCirconference;
         progressCircle.style.strokeDashoffset = dashOffset;
         progressCircle.style.stroke = progressColor;
-        progressDot.style.transform = 'translateX(-50%) rotate('+ progressPercentage/100 +'turn)';
+        progressDot.style.transform = 'translateX(-50%) rotate(' + progressPercentage / 100 + 'turn)';
         progressDot.getElementsByClassName('dot')[0].style.borderColor = progressColor;
         percent.getElementsByTagName('h2')[0].style.color = progressColor;
         percent.getElementsByTagName('h2')[0].innerHTML = progressPercentage;
@@ -119,3 +119,45 @@ const myChart = new Chart(
 );
 drawCircleProgress();
 
+const months = [
+    'January',
+    'February',
+    'March',
+    'April',
+    'May',
+    'June',
+    'July',
+    'August',
+    'September',
+    'October',
+    'November',
+    'December'
+]
+
+const days = [
+    'Sun',
+    'Mon',
+    'Tue',
+    'Wed',
+    'Thu',
+    'Fri',
+    'Sat'
+]
+
+let selectedMonth = new Date();
+function initCalenderSelectedMonth() {
+    let calenderMonthYear = document.getElementsByClassName('calender-controller')[0].getElementsByTagName('span');
+    calenderMonthYear[0].innerHTML = months[selectedMonth.getMonth()];
+    calenderMonthYear[1].innerHTML = selectedMonth.getFullYear();
+}
+
+function changeCalenderSelectedMonth(direction) {
+    if (direction === 'next') {
+        selectedMonth.setMonth(selectedMonth.getMonth() + 1);
+    } else if (direction === 'previous') {
+        selectedMonth.setMonth(selectedMonth.getMonth() - 1);
+    }
+    initCalenderSelectedMonth();
+}
+
+initCalenderSelectedMonth();
