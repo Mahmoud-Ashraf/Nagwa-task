@@ -54,9 +54,6 @@
         margin-bottom: 0;
     }
 
-    /* #myChart {
-        height: 300px;
-    } */
     .chart-container h3 {
         top: 21px;
     }
@@ -68,10 +65,8 @@
     body {
         font-size: 12px;
     }
+
     .chart-container {
         height: 200px;
     }
-    /* #myChart {
-        height: 600px !important;
-    } */
 }
