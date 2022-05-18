@@ -31,7 +31,11 @@
 .percent .number h2 {
     color: #9b9b9b;
     font-weight: 600;
-    font-size: 20px;
+    font-size: 22px;
+}
+.percent .number h2 span {
+    font-weight: 400;
+    font-size: 14px;
 }
 
 .progress-number {
@@ -98,6 +102,9 @@
 .progress:nth-child(1) .end-circle .dot {
     border-color: #4a3274;
 }
+.progress:nth-child(1) .percent .number h2 {
+    color: #4a3274;
+}
 
 .progress:nth-child(2) svg circle {
     stroke-dashoffset: calc(var(--circle-progress-circonference) - (var(--circle-progress-circonference) * 50) / 100);
@@ -109,6 +116,9 @@
 .progress:nth-child(2) .end-circle .dot {
     border-color: #739500;
 }
+.progress:nth-child(2) .percent .number h2 {
+    color: #739500;
+}
 
 .progress:nth-child(3) svg circle {
     stroke-dashoffset: calc(var(--circle-progress-circonference) - (var(--circle-progress-circonference) * 93) / 100);
@@ -119,4 +129,7 @@
 }
 .progress:nth-child(3) .end-circle .dot {
     border-color: #9c128f;
+}
+.progress:nth-child(3) .percent .number h2 {
+    color: #9c128f;
 }
