@@ -167,11 +167,8 @@ initCalenderSelectedMonth();
 // Gradebook
 function intitGradebook() {
     let gradebookTable = document.getElementById('gradebook-table');
-    console.log(gradebookTable);
     let tableBody = gradebookTable.getElementsByTagName('tbody')[0];
-    console.log(tableBody);
     let tableBodyCell = tableBody.getElementsByTagName('td');
-    console.log(tableBodyCell);
     for (let i = 0; i < tableBodyCell.length; i++) {
         let cellData = tableBodyCell[i].getElementsByTagName('span');
         if (cellData.length > 1) {
