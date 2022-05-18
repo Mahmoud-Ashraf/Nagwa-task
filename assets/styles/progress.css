@@ -1,3 +1,7 @@
+:root {
+    --circle-progress-diameter: 45;
+    --circle-progress-circonference: 282.6
+}
 .progress {
     display: flex;
     flex-direction: column;
@@ -60,21 +64,21 @@
     stroke-width: 3;
     stroke-linecap: round;
     transform: translate(5px, 5px);
-    stroke-dasharray: 282.6;
-    stroke-dashoffset: 282.6;
+    stroke-dasharray: var(--circle-progress-circonference);
+    stroke-dashoffset: var(--circle-progress-circonference);
 }
 
 .progress:nth-child(1) svg circle {
-    stroke-dashoffset: calc(282.6 - (282.6 * 81) / 100);
+    stroke-dashoffset: calc(var(--circle-progress-circonference) - (var(--circle-progress-circonference) * 81) / 100);
     stroke: #4a3274;
 }
 
 .progress:nth-child(2) svg circle {
-    stroke-dashoffset: calc(282.6 - (282.6 * 50) / 100);
+    stroke-dashoffset: calc(var(--circle-progress-circonference) - (var(--circle-progress-circonference) * 50) / 100);
     stroke: #739500;
 }
 
 .progress:nth-child(3) svg circle {
-    stroke-dashoffset: calc(282.6 - (282.6 * 93) / 100);
+    stroke-dashoffset: calc(var(--circle-progress-circonference) - (var(--circle-progress-circonference) * 93) / 100);
     stroke: #9c128f;
 }
