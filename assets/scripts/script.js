@@ -175,11 +175,8 @@ function intitGradebook() {
     let tableBodyCell = tableBody.getElementsByTagName('td');
     for (let i = 0; i < tableBodyCell.length; i++) {
         let cellData = tableBodyCell[i].getElementsByTagName('span');
-        if (cellData.length > 1) {
-            if(Number(cellData[0].innerHTML) < Number(cellData[1].innerHTML)/2) {
-                cellData[0].classList.add('fail');
-            }
-            ;
+        if (cellData.length > 1 && Number(cellData[0].innerHTML) < Number(cellData[1].innerHTML) / 2) {
+            cellData[0].classList.add('fail');
         }
     }
 }
