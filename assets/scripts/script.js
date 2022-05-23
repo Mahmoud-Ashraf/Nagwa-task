@@ -145,23 +145,27 @@ const days = [
 ]
 
 // Callender
-let selectedMonth = new Date();
-function initCalenderSelectedMonth() {
+let controllerDate = new Date();
+function initCalenderControllerDate() {
     let calenderMonthYear = document.getElementsByClassName('calender-controller')[0].getElementsByTagName('span');
-    calenderMonthYear[0].innerHTML = months[selectedMonth.getMonth()];
-    calenderMonthYear[1].innerHTML = selectedMonth.getFullYear();
+    calenderMonthYear[0].innerHTML = months[controllerDate.getMonth()];
+    calenderMonthYear[1].innerHTML = controllerDate.getFullYear();
 }
 
 function changeCalenderSelectedMonth(direction) {
     if (direction === 'next') {
-        selectedMonth.setMonth(selectedMonth.getMonth() + 1);
+        controllerDate.setMonth(controllerDate.getMonth() + 1);
     } else if (direction === 'previous') {
-        selectedMonth.setMonth(selectedMonth.getMonth() - 1);
+        controllerDate.setMonth(controllerDate.getMonth() - 1);
     }
-    initCalenderSelectedMonth();
+    initCalenderControllerDate();
 }
 
-initCalenderSelectedMonth();
+// function drawCalender() {
+
+// }
+
+initCalenderControllerDate();
 
 
 // Gradebook
